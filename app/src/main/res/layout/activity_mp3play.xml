@@ -9,8 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
+        style="@style/CategoryStyle"
         android:text="Numbers"
         android:background="@color/category_numbers"
         android:id="@+id/category_numbers"
@@ -18,8 +17,7 @@
         />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
+        style="@style/CategoryStyle"
         android:text="family"
         android:background="@color/category_family"
         android:id="@+id/category_family"
@@ -27,8 +25,7 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
+        style="@style/CategoryStyle"
         android:text="colors"
         android:background="@color/category_colors"
         android:id="@+id/category_colors"
@@ -36,8 +33,7 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
+        style="@style/CategoryStyle"
         android:text="phrases"
         android:id="@+id/category_phrasses"
         android:background="@color/category_phrases"

@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,26 +17,24 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Create a list of words
-      /*  ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti", R.drawable.number_one));
-        words.add(new Word("two", "otiiko", R.drawable.number_two));
-        words.add(new Word("three", "tolookosu", R.drawable.number_one));
-        words.add(new Word("four", "oyyisa", R.drawable.number_two));
-        words.add(new Word("five", "massokka", R.drawable.number_one));
-        words.add(new Word("six", "temmokka", R.drawable.number_two)); */
+        setContentView(R.layout.activity_numbers);
 
-       /* ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("oned");
-        words.add("one4");
+        ArrayList<Word> words = new ArrayList<>();
+        words.add(new Word("one","bir"));
+        words.add(new Word("two","eki"));
+        words.add(new Word("three","ýsh"));
+        words.add(new Word("four","tórt"));
+        words.add(new Word("five","bes"));
+        words.add(new Word("six","alty"));
+        words.add(new Word("seven","jeti"));
+        words.add(new Word("eight","segiz"));
+        words.add(new Word("nine","toghyz"));
+        words.add(new Word("ten","on"));
 
-
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,words);
+        WordAdapter arrayAdapter = new WordAdapter(this,words);
 
         ListView listView = findViewById(R.id.list_numbers);
-        listView.setAdapter(arrayAdapter);*/
+        listView.setAdapter(arrayAdapter);
 
     }
 }

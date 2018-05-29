@@ -36,5 +36,32 @@ public class mp3play extends AppCompatActivity {
             }
         });
 
+        family_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mp3play.this,FamilyMembersActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        colors_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mp3play.this,ColorsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        phrases_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mp3play.this,PhrasesActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 }
