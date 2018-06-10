@@ -8,34 +8,55 @@
     android:background="@color/tan_background"
     android:orientation="vertical">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_numbers">
     <TextView
         style="@style/CategoryStyle"
         android:text="@string/category_numbers"
-        android:background="@color/category_numbers"
+        android:textColor="@android:color/white"
+        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/category_numbers"
 
         />
-
+    </FrameLayout>
+<!-- -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_family">
     <TextView
         style="@style/CategoryStyle"
         android:text="@string/category_family"
-        android:background="@color/category_family"
+        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/category_family"
         />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
 
     <TextView
         style="@style/CategoryStyle"
         android:text="@string/category_colors"
-        android:background="@color/category_colors"
+        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/category_colors"
         />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_phrases">
 
     <TextView
         style="@style/CategoryStyle"
         android:text="@string/category_phrases"
         android:id="@+id/category_phrasses"
-        android:background="@color/category_phrases"
+        android:background="?android:attr/selectableItemBackground"
         />
+    </FrameLayout>
 </LinearLayout>

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context="plant.kz.aygolek.testmp3player.NumbersActivity"
     android:id="@+id/list_numbers"
+    android:drawSelectorOnTop="true"
     >
 
 </ListView>
