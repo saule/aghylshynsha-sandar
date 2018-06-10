@@ -10,7 +10,7 @@
 
     <TextView
         style="@style/CategoryStyle"
-        android:text="Numbers"
+        android:text="@string/category_numbers"
         android:background="@color/category_numbers"
         android:id="@+id/category_numbers"
 
@@ -18,7 +18,7 @@
 
     <TextView
         style="@style/CategoryStyle"
-        android:text="family"
+        android:text="@string/category_family"
         android:background="@color/category_family"
         android:id="@+id/category_family"
         />
@@ -26,7 +26,7 @@
 
     <TextView
         style="@style/CategoryStyle"
-        android:text="colors"
+        android:text="@string/category_colors"
         android:background="@color/category_colors"
         android:id="@+id/category_colors"
         />
@@ -34,7 +34,7 @@
 
     <TextView
         style="@style/CategoryStyle"
-        android:text="phrases"
+        android:text="@string/category_phrases"
         android:id="@+id/category_phrasses"
         android:background="@color/category_phrases"
         />

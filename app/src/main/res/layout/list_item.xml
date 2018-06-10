@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    style="@style/NumberTranslationStyle"
+    >
+
+
+    <ImageView
+        style="@style/icons"
+        android:id="@+id/word_imageview"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+
+        android:id="@+id/textContainer"
+        >
+
+        <TextView
+            style="@style/activityEnglishTextStyle"
+            android:id="@+id/english_number_textview"
+            tools:text="one"/>
+
+        <TextView
+            style="@style/activityMiwokTextStyle"
+            android:id="@+id/qazaq_number_textview"
+            tools:text="bir"/>
+
+    </LinearLayout>
+
+</LinearLayout>
