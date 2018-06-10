@@ -22,15 +22,15 @@ public class mp3play extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mp3play);
 
-        numbers_category=findViewById(R.id.category_numbers);
-        family_category=findViewById(R.id.category_family);
-        colors_category=findViewById(R.id.category_colors);
-        phrases_category=findViewById(R.id.category_phrasses);
+        numbers_category = findViewById(R.id.category_numbers);
+        family_category = findViewById(R.id.category_family);
+        colors_category = findViewById(R.id.category_colors);
+        phrases_category = findViewById(R.id.category_phrasses);
 
         numbers_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mp3play.this,NumbersActivity.class);
+                Intent intent = new Intent(mp3play.this, NumbersActivity.class);
                 startActivity(intent);
 
             }
@@ -39,7 +39,7 @@ public class mp3play extends AppCompatActivity {
         family_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mp3play.this,FamilyMembersActivity.class);
+                Intent intent = new Intent(mp3play.this, FamilyMembersActivity.class);
                 startActivity(intent);
 
             }
@@ -48,7 +48,7 @@ public class mp3play extends AppCompatActivity {
         colors_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mp3play.this,ColorsActivity.class);
+                Intent intent = new Intent(mp3play.this, ColorsActivity.class);
                 startActivity(intent);
 
             }
@@ -57,7 +57,7 @@ public class mp3play extends AppCompatActivity {
         phrases_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mp3play.this,PhrasesActivity.class);
+                Intent intent = new Intent(mp3play.this, PhrasesActivity.class);
                 startActivity(intent);
 
             }

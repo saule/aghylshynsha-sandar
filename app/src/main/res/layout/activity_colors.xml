@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="plant.kz.aygolek.testmp3player.ColorsActivity"
-    android:id="@+id/list_colors"
-    >
+    android:id="@+id/list_colors">
 
 </ListView>

@@ -31,25 +31,24 @@ public class ColorsActivity extends AppCompatActivity implements AudioManager.On
     };
 
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_colors);
 
-         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("white","aq", R.drawable.color_white, R.raw.color_white));
-        words.add(new Word("yellow","sary", R.drawable.color_mustard_yellow,R.raw.color_mustard_yellow));
-        words.add(new Word("red","qyzyl", R.drawable.color_red, R.raw.color_red));
-        words.add(new Word("pink","qyzghylt", R.drawable.color_dusty_yellow,  R.raw.color_dusty_yellow));
-        words.add(new Word("brown","qonyr", R.drawable.color_brown, R.raw.color_brown));
-        words.add(new Word("green","jasyl", R.drawable.color_green, R.raw.color_green));
-        words.add(new Word("blue","kók", R.drawable.color_gray, R.raw.color_gray));
+        words.add(new Word("white", "aq", R.drawable.color_white, R.raw.color_white));
+        words.add(new Word("yellow", "sary", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
+        words.add(new Word("red", "qyzyl", R.drawable.color_red, R.raw.color_red));
+        words.add(new Word("pink", "qyzghylt", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
+        words.add(new Word("brown", "qonyr", R.drawable.color_brown, R.raw.color_brown));
+        words.add(new Word("green", "jasyl", R.drawable.color_green, R.raw.color_green));
+        words.add(new Word("blue", "kók", R.drawable.color_gray, R.raw.color_gray));
 
-        WordAdapter arrayAdapter = new WordAdapter(this,words,R.color.category_colors);
+        WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_colors);
 
         ListView listView = findViewById(R.id.list_colors);
         listView.setAdapter(arrayAdapter);
@@ -59,20 +58,20 @@ public class ColorsActivity extends AppCompatActivity implements AudioManager.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 releaseMediaPlayer();
                 long itemIdAtPosition = parent.getItemIdAtPosition(position);
-                Log.v("audio_focus","fouces is granted");
+                Log.v("audio_focus", "fouces is granted");
                 int audioResourceId = words.get((int) itemIdAtPosition).getAudioResourceId();
 
                 int result = audioManager.requestAudioFocus(
-                        ColorsActivity.this,AudioManager.STREAM_MUSIC,AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+                        ColorsActivity.this, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
-                if(result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED){
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
                     //audioManager.registerMediaButtonEventReceiver();
-                    mediaPlayer= MediaPlayer.create(ColorsActivity.this,audioResourceId);
+                    mediaPlayer = MediaPlayer.create(ColorsActivity.this, audioResourceId);
                     mediaPlayer.start();
                     mediaPlayer.setOnCompletionListener(myCompletionListener);
                 } else {
-                    Toast.makeText(ColorsActivity.this,"Cannot gain audio focus", Toast.LENGTH_SHORT);
+                    Toast.makeText(ColorsActivity.this, "Cannot gain audio focus", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -110,7 +109,7 @@ public class ColorsActivity extends AppCompatActivity implements AudioManager.On
     @Override
     public void onAudioFocusChange(int focusChange) {
         if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK ) {
+                focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
             // Pause playback because your Audio Focus was
             // temporarily stolen, but will be back soon.
             // i.e. for a phone call
@@ -125,7 +124,7 @@ public class ColorsActivity extends AppCompatActivity implements AudioManager.On
             releaseMediaPlayer();
 
 
-        }  else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
             // Resume playback, because you hold the Audio Focus
             // again!
             // i.e. the phone call ended or the nav directions

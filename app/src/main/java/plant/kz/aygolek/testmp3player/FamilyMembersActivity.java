@@ -22,7 +22,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
         @Override
         public void onAudioFocusChange(int focusChange) {
             if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK ) {
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
                 // Pause playback because your Audio Focus was
                 // temporarily stolen, but will be back soon.
                 // i.e. for a phone call
@@ -37,7 +37,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
                 releaseMediaPlayer();
 
 
-            }  else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                 // Resume playback, because you hold the Audio Focus
                 // again!
                 // i.e. the phone call ended or the nav directions
@@ -65,15 +65,15 @@ public class FamilyMembersActivity extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("mom","ana", R.drawable.family_mother,R.raw.family_mother));
-        words.add(new Word("dad","áke", R.drawable.family_father,R.raw.family_father));
-        words.add(new Word("brother","agha", R.drawable.family_older_brother,R.raw.family_older_brother));
-        words.add(new Word("sister","ápke", R.drawable.family_older_sister,R.raw.family_older_sister));
-        words.add(new Word("grandma","áje", R.drawable.family_grandmother,R.raw.family_grandmother));
-        words.add(new Word("grandpa","ata", R.drawable.family_grandfather,R.raw.family_grandfather));
-        words.add(new Word("baby","bópe", R.drawable.family_younger_brother,R.raw.family_younger_brother));
+        words.add(new Word("mom", "ana", R.drawable.family_mother, R.raw.family_mother));
+        words.add(new Word("dad", "áke", R.drawable.family_father, R.raw.family_father));
+        words.add(new Word("brother", "agha", R.drawable.family_older_brother, R.raw.family_older_brother));
+        words.add(new Word("sister", "ápke", R.drawable.family_older_sister, R.raw.family_older_sister));
+        words.add(new Word("grandma", "áje", R.drawable.family_grandmother, R.raw.family_grandmother));
+        words.add(new Word("grandpa", "ata", R.drawable.family_grandfather, R.raw.family_grandfather));
+        words.add(new Word("baby", "bópe", R.drawable.family_younger_brother, R.raw.family_younger_brother));
 
-        WordAdapter arrayAdapter = new WordAdapter(this,words,R.color.category_family);
+        WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_family);
 
         ListView listView = findViewById(R.id.list_fammembers);
         listView.setAdapter(arrayAdapter);
@@ -83,13 +83,13 @@ public class FamilyMembersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 releaseMediaPlayer();
                 long itemIdAtPosition = parent.getItemIdAtPosition(position);
-                System.out.println("rrrrrrrrrr   "+itemIdAtPosition);
+                System.out.println("rrrrrrrrrr   " + itemIdAtPosition);
                 int audioResourceId = words.get((int) itemIdAtPosition).getAudioResourceId();
 
                 int result = audioManager.requestAudioFocus(
-                        mAudioFocusListener,AudioManager.STREAM_MUSIC,AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+                        mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
-                if(result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
                     mediaPlayer = MediaPlayer.create(FamilyMembersActivity.this, audioResourceId);
                     mediaPlayer.start();

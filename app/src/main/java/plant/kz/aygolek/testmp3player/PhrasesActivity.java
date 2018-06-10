@@ -23,7 +23,7 @@ public class PhrasesActivity extends AppCompatActivity {
         @Override
         public void onAudioFocusChange(int focusChange) {
             if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK ) {
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
                 // Pause playback because your Audio Focus was
                 // temporarily stolen, but will be back soon.
                 // i.e. for a phone call
@@ -38,7 +38,7 @@ public class PhrasesActivity extends AppCompatActivity {
                 releaseMediaPlayer();
 
 
-            }  else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                 // Resume playback, because you hold the Audio Focus
                 // again!
                 // i.e. the phone call ended or the nav directions
@@ -71,12 +71,12 @@ public class PhrasesActivity extends AppCompatActivity {
 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        final    ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("hello","sálem",-1,R.raw.phrase_are_you_coming));
-        words.add(new Word("h a u?","qal qalay?",-1,R.raw.phrase_come_here));
-        words.add(new Word("ur name","atyng kim?",-1,R.raw.phrase_how_are_you_feeling));
+        final ArrayList<Word> words = new ArrayList<>();
+        words.add(new Word("hello", "sálem", -1, R.raw.phrase_are_you_coming));
+        words.add(new Word("h a u?", "qal qalay?", -1, R.raw.phrase_come_here));
+        words.add(new Word("ur name", "atyng kim?", -1, R.raw.phrase_how_are_you_feeling));
 
-        WordAdapter arrayAdapter = new WordAdapter(this,words,R.color.category_phrases);
+        WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_phrases);
 
         ListView listView = findViewById(R.id.list_phrases);
         listView.setAdapter(arrayAdapter);
