@@ -1,7 +1,51 @@
 <resources>
-    <string name="app_name">Miwok</string>
+    <string name="app_name">English words</string>
     <string name="category_numbers">Numbers</string>
     <string name="category_colors">Colors</string>
     <string name="category_phrases">Phrases</string>
     <string name="category_family">Family Members</string>
+    <string name="num_one" translatable="false">1</string>
+    <string name="num_two" translatable="false">2</string>
+    <string name="num_three" translatable="false">3</string>
+    <string name="num_four" translatable="false">4</string>
+    <string name="num_five" translatable="false">5</string>
+    <string name="num_six" translatable="false">6</string>
+    <string name="num_seven" translatable="false">7</string>
+    <string name="num_eight" translatable="false">8</string>
+    <string name="num_nine" translatable="false">9</string>
+    <string name="num_ten" translatable="false">10</string>
+
+    <string name="color_white">white</string>
+    <string name="color_yellow">yellow</string>
+    <string name="color_red">red</string>
+    <string name="color_pink">pink</string>
+    <string name="color_brown">brown</string>
+    <string name="color_green">green</string>
+    <string name="color_grey">grey</string>
+    <string name="color_black">black</string>
+    <string name="color_blue">blue</string>
+
+    <string name="fam_mom">mom</string>
+    <string name="fam_dad">dad</string>
+    <string name="fam_older_brother">older brother</string>
+    <string name="fam_older_sister">older sister</string>
+    <string name="fam_grandma">grandma</string>
+    <string name="fam_younger_sister">younger sister</string>
+    <string name="fam_younger_brother">younger brother</string>
+    <string name="fam_grandpa">grandpa</string>
+    <string name="fam_daughter">daughter</string>
+    <string name="fam_son">son</string>
+
+    <string name="prases_where_are_u_going">Where are you going?</string>
+    <string name="prases_hello">Hello</string>
+    <string name="prases_what_is_your_name">What is your name?</string>
+    <string name="prases_my_name_is">My name is &#8230;</string>
+    <string name="prases_how_are_you">How are you?</string>
+    <string name="prases_i_am_good">I am good</string>
+    <string name="prases_will_u_come">Will you come?</string>
+    <string name="prases_yes">Yes</string>
+    <string name="prases_no">No</string>
+    <string name="prases_lets_go">Let\\'s go</string>
+    <string name="prases_come_here">come here</string>
+
 </resources>

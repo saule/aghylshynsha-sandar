@@ -72,9 +72,17 @@ public class PhrasesActivity extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("hello", "sálem", -1, R.raw.phrase_are_you_coming));
-        words.add(new Word("h a u?", "qal qalay?", -1, R.raw.phrase_come_here));
-        words.add(new Word("ur name", "atyng kim?", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_hello), "hello", -1, R.raw.phrase_are_you_coming));
+        words.add(new Word(getResources().getString(R.string.prases_what_is_your_name), "What is your name?", -1, R.raw.phrase_come_here));
+        words.add(new Word(getResources().getString(R.string.prases_my_name_is), "My name is ...", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_how_are_you), "How are you?", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_i_am_good), "I am good", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_where_are_u_going), "Where are you going?", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_lets_go), "Let's go", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_will_u_come), "Will you come?", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_yes), "Yes", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_no), "No", -1, R.raw.phrase_how_are_you_feeling));
+        words.add(new Word(getResources().getString(R.string.prases_come_here), "Come here", -1, R.raw.phrase_how_are_you_feeling));
 
         WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_phrases);
 

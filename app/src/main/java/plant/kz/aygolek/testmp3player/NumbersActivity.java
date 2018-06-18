@@ -72,16 +72,16 @@ public class NumbersActivity extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "bir", R.drawable.number_one, R.raw.number_one));
-        words.add(new Word("two", "eki", R.drawable.number_two, R.raw.number_two));
-        words.add(new Word("three", "ýsh", R.drawable.number_three, R.raw.number_three));
-        words.add(new Word("four", "tórt", R.drawable.number_four, R.raw.number_four));
-        words.add(new Word("five", "bes", R.drawable.number_five, R.raw.number_five));
-        words.add(new Word("six", "alty", R.drawable.number_six, R.raw.number_six));
-        words.add(new Word("seven", "jeti", R.drawable.number_seven, R.raw.number_seven));
-        words.add(new Word("eight", "segiz", R.drawable.number_eight, R.raw.number_eight));
-        words.add(new Word("nine", "toghyz", R.drawable.number_nine, R.raw.number_nine));
-        words.add(new Word("ten", "on", R.drawable.number_ten, R.raw.number_ten));
+        words.add(new Word(getResources().getString(R.string.num_one), "one", R.drawable.number_one, R.raw.number_one));
+        words.add(new Word(getResources().getString(R.string.num_two), "two", R.drawable.number_two, R.raw.number_two));
+        words.add(new Word(getResources().getString(R.string.num_three), "three", R.drawable.number_three, R.raw.number_three));
+        words.add(new Word(getResources().getString(R.string.num_four), "four", R.drawable.number_four, R.raw.number_four));
+        words.add(new Word(getResources().getString(R.string.num_five), "five", R.drawable.number_five, R.raw.number_five));
+        words.add(new Word(getResources().getString(R.string.num_six), "six", R.drawable.number_six, R.raw.number_six));
+        words.add(new Word(getResources().getString(R.string.num_seven), "seven", R.drawable.number_seven, R.raw.number_seven));
+        words.add(new Word(getResources().getString(R.string.num_eight), "eight", R.drawable.number_eight, R.raw.number_eight));
+        words.add(new Word(getResources().getString(R.string.num_nine), "nine", R.drawable.number_nine, R.raw.number_nine));
+        words.add(new Word(getResources().getString(R.string.num_ten), "ten", R.drawable.number_ten, R.raw.number_ten));
 
         WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_numbers);
 

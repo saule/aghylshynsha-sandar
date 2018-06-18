@@ -40,13 +40,15 @@ public class ColorsActivity extends AppCompatActivity implements AudioManager.On
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("white", "aq", R.drawable.color_white, R.raw.color_white));
-        words.add(new Word("yellow", "sary", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
-        words.add(new Word("red", "qyzyl", R.drawable.color_red, R.raw.color_red));
-        words.add(new Word("pink", "qyzghylt", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
-        words.add(new Word("brown", "qonyr", R.drawable.color_brown, R.raw.color_brown));
-        words.add(new Word("green", "jasyl", R.drawable.color_green, R.raw.color_green));
-        words.add(new Word("blue", "kók", R.drawable.color_gray, R.raw.color_gray));
+        words.add(new Word(getResources().getString(R.string.color_white), "white", R.drawable.color_white, R.raw.color_white));
+        words.add(new Word(getResources().getString(R.string.color_yellow), "yellow", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
+        words.add(new Word(getResources().getString(R.string.color_red), "red", R.drawable.color_red, R.raw.color_red));
+        words.add(new Word(getResources().getString(R.string.color_pink), "pink", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
+        words.add(new Word(getResources().getString(R.string.color_green), "green", R.drawable.color_green, R.raw.color_green));
+        words.add(new Word(getResources().getString(R.string.color_blue), "blue", R.drawable.color_black, R.raw.color_black));
+        words.add(new Word(getResources().getString(R.string.color_brown), "brown", R.drawable.color_brown, R.raw.color_brown));
+        words.add(new Word(getResources().getString(R.string.color_grey), "gray", R.drawable.color_gray, R.raw.color_gray));
+        words.add(new Word(getResources().getString(R.string.color_black), "black", R.drawable.color_black, R.raw.color_black));
 
         WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_colors);
 

@@ -65,13 +65,16 @@ public class FamilyMembersActivity extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("mom", "ana", R.drawable.family_mother, R.raw.family_mother));
-        words.add(new Word("dad", "áke", R.drawable.family_father, R.raw.family_father));
-        words.add(new Word("brother", "agha", R.drawable.family_older_brother, R.raw.family_older_brother));
-        words.add(new Word("sister", "ápke", R.drawable.family_older_sister, R.raw.family_older_sister));
-        words.add(new Word("grandma", "áje", R.drawable.family_grandmother, R.raw.family_grandmother));
-        words.add(new Word("grandpa", "ata", R.drawable.family_grandfather, R.raw.family_grandfather));
-        words.add(new Word("baby", "bópe", R.drawable.family_younger_brother, R.raw.family_younger_brother));
+        words.add(new Word(getResources().getString(R.string.fam_mom), "mother", R.drawable.family_mother, R.raw.family_mother));
+        words.add(new Word(getResources().getString(R.string.fam_dad), "father", R.drawable.family_father, R.raw.family_father));
+        words.add(new Word(getResources().getString(R.string.fam_younger_brother), "younger brother", R.drawable.family_younger_brother, R.raw.family_younger_brother));
+        words.add(new Word(getResources().getString(R.string.fam_younger_sister), "younger sister", R.drawable.family_younger_sister, R.raw.family_younger_sister));
+        words.add(new Word(getResources().getString(R.string.fam_older_brother), "older brother", R.drawable.family_older_brother, R.raw.family_older_brother));
+        words.add(new Word(getResources().getString(R.string.fam_older_sister), "older sister", R.drawable.family_older_sister, R.raw.family_older_sister));
+        words.add(new Word(getResources().getString(R.string.fam_daughter), "daughter", R.drawable.family_daughter, R.raw.family_daughter));
+        words.add(new Word(getResources().getString(R.string.fam_son), "son", R.drawable.family_son, R.raw.family_son));
+        words.add(new Word(getResources().getString(R.string.fam_grandma), "grandma", R.drawable.family_grandmother, R.raw.family_grandmother));
+        words.add(new Word(getResources().getString(R.string.fam_grandpa), "grandpa", R.drawable.family_grandfather, R.raw.family_grandfather));
 
         WordAdapter arrayAdapter = new WordAdapter(this, words, R.color.category_family);
 
