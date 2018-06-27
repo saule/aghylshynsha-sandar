@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="plant.kz.aygolek.testmp3player.mp3play"
+    tools:context="qz.aygolek.englishwordsapp.main_activity"
     android:background="@color/tan_background"
     android:orientation="vertical">
 

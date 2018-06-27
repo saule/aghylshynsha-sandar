@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="plant.kz.aygolek.testmp3player">
+    package="qz.aygolek.englilshwordsapp">
 
     <application
         android:allowBackup="true"
@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mp3play">
+        <activity android:name="qz.aygolek.englishwordsapp.main_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NumbersActivity" android:label="@string/category_numbers">
+        <activity android:name="qz.aygolek.englishwordsapp.NumbersActivity" android:label="@string/category_numbers">
 
         </activity>
-        <activity android:name=".ColorsActivity" android:label="@string/category_colors"></activity>
-        <activity android:name=".PhrasesActivity" android:label="@string/category_phrases"></activity>
-        <activity android:name=".FamilyMembersActivity" android:label="@string/category_family"></activity>
+        <activity android:name="qz.aygolek.englishwordsapp.ColorsActivity" android:label="@string/category_colors"></activity>
+        <activity android:name="qz.aygolek.englishwordsapp.PhrasesActivity" android:label="@string/category_phrases"></activity>
+        <activity android:name="qz.aygolek.englishwordsapp.FamilyMembersActivity" android:label="@string/category_family"></activity>
     </application>
 
 </manifest>
