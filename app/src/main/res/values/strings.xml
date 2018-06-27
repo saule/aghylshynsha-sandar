@@ -1,4 +1,15 @@
 <resources>
+    <string name="num_one">бір</string>
+    <string name="num_two">екі</string>
+    <string name="num_three">үш</string>
+    <string name="num_four">төрт</string>
+    <string name="num_five">бес</string>
+    <string name="num_six">алты</string>
+    <string name="num_seven">жеті</string>
+    <string name="num_eight">сегіз</string>
+    <string name="num_nine">тоғыз</string>
+    <string name="num_ten">он</string>
+
     <string name="app_name">Ағылшын сөздері</string>
     <string name="category_numbers">Сандар</string>
     <string name="category_colors">Түстер</string>
